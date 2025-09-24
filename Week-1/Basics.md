@@ -305,5 +305,3 @@
 
 ---
 
-Do you want me to also create a **condensed revision sheet (1–2 pages)** from this master document for quick exam preparation?
-
