@@ -30,6 +30,41 @@
    `marks = 100
   `
 
+---
+  
+ ## Extra: **Constant vs Changing Variable: Exam Marks Processing**
+
+### 1. Constant Variable
+
+A **constant variable** is one whose value does **not change** during computation.
+
+**Example:**
+
+```
+MAX_MARKS = 100
+```
+
+* This represents the maximum marks a student can score in the exam.
+* No matter how many students we process, `MAX_MARKS` will always stay `100`.
+
+---
+
+### 2. Changing Variable
+
+A **changing variable** is one whose value **keeps changing** as computation proceeds.
+
+**Example:**
+
+```
+highestScore = 0
+```
+
+* Initially set to 0.
+* As we go through the list of student marks, we update `highestScore` if we find a student with more marks.
+
+---
+
+
 ### Iterators
 
 * An **iterator** is a variable that allows traversal( repetition ) through elements of a dataset, one by one.
@@ -415,3 +450,7 @@ ShoppingBillList = [
 * **List**: sequence of elements of the same datatype, enabling representation of datasets.
 
 ---
+
+
+
+
