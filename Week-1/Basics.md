@@ -86,6 +86,9 @@
   | Circle (Connector)           | Continuation                   | Used when flowchart spans multiple pages.     |
   
   ---
+  ### Pictorial View
+  <img width="988" height="538" alt="image" src="https://github.com/user-attachments/assets/c420bab0-ff07-4015-8d00-5d93c3fe137a" />
+
 
   ### Advantages of Flowcharts
   
@@ -120,11 +123,13 @@
 5. Add card X’s Maths score to Sum.
 6. Go back to Step 3.
 
-**Modifications:**
+**Modifications( You can try ):**
 
 * If we need only boys’ marks.
 * If we need only girls’ marks.
 * If we need boys’ and girls’ marks separately.
+
+<img width="1013" height="577" alt="image" src="https://github.com/user-attachments/assets/790c4294-202b-43f6-be65-467958173fa5" />
 
 ---
 
@@ -280,6 +285,23 @@
   * Value
   * Datatype specification
 * Ensures **sanity** of individual fields.
+  
+**Example: Item Record**
+
+| Field        | Datatype | Example Value |
+| ------------ | -------- | ------------- |
+| `itemName`   | String   | `"Milk"`      |
+| `quantity`   | Integer  | `2`           |
+| `unitPrice`  | Float    | `25.50`       |
+| `totalPrice` | Float    | `51.00`       |
+
+So, one **Item Record** looks like:
+
+```
+Item = { itemName: "Milk", quantity: 2, unitPrice: 25.50, totalPrice: 51.00 }
+```
+
+This is a **Record** datatype.
 
 ---
 
@@ -291,6 +313,95 @@
   * **ScoresList** → list of `Scores` records
   * **ParagraphWordsList** → list of `WordInPara` records
   * **ShoppingBillList** → list of `Item` records
+ 
+Here, our shopping bill will be a **List of Item Records**.
+
+**Example: ItemList (List of Items)**
+
+```
+ItemList = [
+    { itemName: "Milk", quantity: 2, unitPrice: 25.50, totalPrice: 51.00 },
+    { itemName: "Bread", quantity: 1, unitPrice: 30.00, totalPrice: 30.00 },
+    { itemName: "Eggs", quantity: 12, unitPrice: 6.00, totalPrice: 72.00 }
+]
+```
+
+Now, let’s define the **ShoppingBill Record**.
+This is another **Record**, but one of its fields is itself a **List** of items.
+
+| Field        | Datatype   | Example Value |
+| ------------ | ---------- | ------------- |
+| `billNo`     | Integer    | `101`         |
+| `customer`   | String     | `"Alice"`     |
+| `date`       | Date       | `"12 Sep"`    |
+| `items`      | List(Item) | `ItemList`    |
+| `grandTotal` | Float      | `153.00`      |
+
+**Example: ShoppingBill Record**
+
+```
+ShoppingBill = {
+    billNo: 101,
+    customer: "Alice",
+    date: "12 Sep",
+    items: [
+        { itemName: "Milk", quantity: 2, unitPrice: 25.50, totalPrice: 51.00 },
+        { itemName: "Bread", quantity: 1, unitPrice: 30.00, totalPrice: 30.00 },
+        { itemName: "Eggs", quantity: 12, unitPrice: 6.00, totalPrice: 72.00 }
+    ],
+    grandTotal: 153.00
+}
+```
+
+---
+**List of Shopping Bills**
+
+Finally, a supermarket will have **many shopping bills**.
+So we define a **ShoppingBillList**, which is a **List of ShoppingBill Records**.
+
+**Example: ShoppingBillList**
+
+```
+ShoppingBillList = [
+    {
+        billNo: 101,
+        customer: "Alice",
+        date: "12 Sep",
+        items: [
+            { itemName: "Milk", quantity: 2, unitPrice: 25.50, totalPrice: 51.00 },
+            { itemName: "Bread", quantity: 1, unitPrice: 30.00, totalPrice: 30.00 },
+            { itemName: "Eggs", quantity: 12, unitPrice: 6.00, totalPrice: 72.00 }
+        ],
+        grandTotal: 153.00
+    },
+    {
+        billNo: 102,
+        customer: "Bob",
+        date: "13 Sep",
+        items: [
+            { itemName: "Rice", quantity: 5, unitPrice: 40.00, totalPrice: 200.00 },
+            { itemName: "Oil", quantity: 1, unitPrice: 120.00, totalPrice: 120.00 }
+        ],
+        grandTotal: 320.00
+    }
+]
+```
+
+---
+**Note:**
+
+1. **Record Datatype** = Collection of fields.
+
+   * Example: `Item` with `itemName`, `quantity`, `unitPrice`, `totalPrice`.
+
+2. **List Datatype** = Sequence of elements of the same type.
+
+   * Example: `ItemList` = list of multiple `Item` Records.
+
+3. **Nested Datatypes**:
+
+   * A **ShoppingBill Record** contains a field `items` which is a **List of Item Records**.
+   * A **ShoppingBillList** is a list of **ShoppingBill Records**.
 
 ---
 
@@ -300,8 +411,7 @@
 * **Basic datatypes**: Integer, Boolean, Character, String.
 * **Subtypes** restrict ranges and permitted operations (e.g., Marks, Count, Gender).
 * **Transformations** allow mapping between integer/float and human-readable formats (e.g., Date, Fractional marks).
-* **Record**: collection of named fields (possibly different datatypes).
+* **Record**: collection of named fields (possibly different datatypes or sometimes same).
 * **List**: sequence of elements of the same datatype, enabling representation of datasets.
 
 ---
-
