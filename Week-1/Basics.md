@@ -254,7 +254,7 @@ highestScore = 0
 
   * Count
   * Boolean
-* Arithmetic (`+ - * /`) does **not** make sense for count.
+* Arithmetic (`* /`) does **not** make sense for count.
 
 ---
 
