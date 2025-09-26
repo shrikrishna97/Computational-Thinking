@@ -104,7 +104,7 @@ highestScore = 0
 
   ### What is a Flowchart?
   
-  * A flowchart is a graphical representation of an algorithm.
+  * A flowchart is a graphical representation of an **algorithm**.
   * Used by programmers as a program-planning tool to solve problems.
   * Consists of symbols connected with arrows to show the flow of data and processing.
   * The process of drawing a flowchart is called *flowcharting*.
