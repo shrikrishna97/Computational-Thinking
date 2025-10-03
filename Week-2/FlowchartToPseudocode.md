@@ -2,8 +2,12 @@
 
 # **Week – 2**
 
-**Flowcharts**
-Pictorial representation of computational process
+## 1. **Flowcharts**
+
+### What is a Flowchart?
+
+A **flowchart** is a pictorial representation of a computational process. It shows the steps of a problem-solving process in a **visual form** using standard symbols.
+
 
 **Eg:** Counting the number of cards
 
@@ -34,9 +38,10 @@ Pictorial representation of computational process
 * *Collaboration:* Sharing pictures in editable format
 * *Versions:* Compare changes between flowcharts
 
-### **From pictures to text:**
 
-**Describing the previous process in words**
+## 2. **From Flowchart to Stepwise Text**
+
+**Instead of drawing, we can write the same process step by step in words:**
 
 **Step 0** Start
 
@@ -86,7 +91,13 @@ Pictorial representation of computational process
 
 ---
 
-# **Pseudocode**
+## 3. **Pseudocode**
+
+**What is pseudocode?**
+
+* A **textual, language-like notation** to describe computational processes.
+* Easier to write and understand than flowcharts.
+* Can be quickly converted into real code later.
 
 ```
 Start
@@ -274,3 +285,22 @@ while (Pile 1 has more cards) {
 * `if (x.Gender == M)`
 
 ---
+## 4. **Why Pseudocode?**
+
+* Flowcharts → good for visualization, especially for beginners.
+* But pseudocode → easier to write, edit, and share.
+* It looks close to real programming languages (like Python, C, Java).
+* Natural next step after learning flowcharts.
+
+---
+
+## 5. **Final Takeaway**
+
+* Start with **flowcharts** to visualize processes.
+* Move to **stepwise text** for clarity.
+* Then use **pseudocode** for precision and ease of conversion into code.
+* Eventually, pseudocode transitions smoothly into **real programming**.
+
+This structure makes the learning journey very **logical**:
+
+**Flowchart → Text Steps → Pseudocode → Programming.**
