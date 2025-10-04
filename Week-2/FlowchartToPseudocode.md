@@ -87,7 +87,7 @@ A **flowchart** is a pictorial representation of a computational process. It sho
     
     .
     
-    **Step 7** Go back to step 2 ( we also want to write the from step 2 to step 6 needs to be repeated again and again, which is not written in flow chart )
+    **Step 7** Go back to step 2 ( we also want to write that from step 2 to step 6 needs to be repeated again and again, which is not written in flow chart )
 
 ---
 
