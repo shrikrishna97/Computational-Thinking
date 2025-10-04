@@ -61,7 +61,7 @@ A **flowchart** is a pictorial representation of a computational process. It sho
 
 **Step 8** End
 
-    Is this step wise wording helping us ? it tells us about the future step then about the past step again to be executed. We don't want that !! lets what can be done...
+    Is this step wise wording helping us ? it tells us about the future step then about the past step again to be executed. We don't want that !! let's see what can be done...
 
 ---
 
