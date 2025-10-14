@@ -119,7 +119,7 @@ Factor of reduction = (9 - 1) / ((9 / 3) - 1)
                     = 4
 ```
 
-✅ **Reduction is by a factor of 4 times**
+**Reduction is by a factor of 4 times**
 
 ---
 
