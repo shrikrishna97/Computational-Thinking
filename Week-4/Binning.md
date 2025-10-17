@@ -1,4 +1,47 @@
-# **Week 4 — Binning Method**
+# Week 4
+
+## **Nested Iterations**
+
+### **1. Concept of Nested Iterations**
+
+**Nested iteration** means having one loop *inside another loop*.
+In this case, the **inner loop** executes completely for every single iteration of the **outer loop**.
+
+This is commonly used when working with **multi-level data structures** or **repeated patterns**, such as:
+
+* Processing elements in a 2D array or matrix
+* Generating combinations or pairs of elements
+* Performing operations on grouped data
+
+**General structure:**
+
+```python
+foreach i in List1:          # Outer loop
+    foreach j in List2:      # Inner loop
+        # Code block executed length(List1) × length(List2) times
+```
+
+### **2. Difference Between Normal and Nested Iteration**
+
+| Feature             | Normal Iteration                                            | Nested Iteration                                                  |
+| ------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Definition**      | A single loop executing repeatedly over a range or sequence | A loop inside another loop                                        |
+| **Structure**       | One level of iteration                                      | Two or more levels of iteration                                   |
+| **Execution Count** | Depends on one variable (e.g., N times)                     | Depends on product of loop counts (e.g., N × M times)             |
+| **Use Case**        | Linear data (1D list, single range)                         | Multi-dimensional or pairwise operations (2D arrays, comparisons) |
+| **Example**         | Summing numbers in a list                                   | Multiplying two matrices                                          |
+
+---
+
+### ✅ **Summary**
+
+* **Normal Iteration:** One loop for simple repeated tasks.
+* **Nested Iteration:** Loops within loops for multi-level or relational tasks.
+* **Common Use:** When one process must be repeated *for every value* of another.
+
+---
+
+# **Binning Method**
 
 ### **Introduction**
 
@@ -145,3 +188,4 @@ Total comparisons for all bins = 3 × 3 = 9
 **Reduced by a factor of 4 times.**
 
 ---
+
