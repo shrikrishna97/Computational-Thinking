@@ -254,6 +254,14 @@ End SortedListInsert
 
 ---
 
+`InsertionSort` uses updated `SortedListInsert`
+
+`sortedMathsList = InsertionSort(mathsList)`
+
+`sortedPhysicsList = InsertionSort(physicsList)`
+
+---
+
 ## **Assigning Grades Using Quartiles**
 
 We divide the sorted list into **four parts**:
@@ -263,6 +271,7 @@ A (top 25%), B (next 25%), C (next 25%), D (bottom 25%).
 
 ```text
 Procedure SimpleGradeAssignment(l)
+    classSize = length(l)  # length(l) returns number of elements in l
     q4 = classSize/4, q3 = classSize/2, q2 = 3*classSize/4
     gradeA, gradeB, gradeC, gradeD = [], [], [], []
     position = 0
@@ -311,6 +320,28 @@ physicsDGrades = last(physicsGrades)
 Check how many students with high Maths grades (A or B) also perform **at least as well** in Physics.
 
 ### **Pseudocode**
+
+Check how many students with A in Maths confirm the hypothesis `exitloop` prematurely terminates a foreach loop
+
+```text
+confirm = []
+reject = []
+foreach x in mathsAGrades {
+   found = False
+   foreach y in physicsAGrades {
+      if (x == y) {
+         confirm = confirm ++ [x]
+         found = True
+         exitloop
+         }
+   }
+   if (not(found)) {
+       reject = reject ++ [x]
+   }
+}
+```
+
+Check how many students with B in Maths confirm the hypothesis
 
 ```text
 foreach x in mathsBGrades {
