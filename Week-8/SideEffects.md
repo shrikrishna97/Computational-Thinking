@@ -1,7 +1,5 @@
 # Side Effects in Pseudocode for Lists and Dictionaries
 
-> **📚 Reference**: This document is based on [Lecture 8.5 - Side effects in pseudocodes for lists and dictionaries.pdf](./Lecture%208.5%20-%20Side%20effects%20in%20pseudocodes%20for%20lists%20and%20dictionaries.pdf)
-
 ## Introduction to Side Effects
 
 When we introduced procedures, we discussed the issue of **side effects** in the context of cards or tables. A side effect occurs when we pass a data structure (like a stack of cards or a table) to a procedure, and changes made inside the procedure are reflected outside. This change may or may not be required or intended.
