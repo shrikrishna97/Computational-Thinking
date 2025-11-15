@@ -100,6 +100,7 @@ removeKey(d, k)
         if key != k
             myD[key] = d[key]
     d = myD  // Update original dictionary
+    return d // new dictionary without k ( key ) 
 ```
 
 This procedure modifies the dictionary `d` directly. The side effect is **expected and documented** - the caller knows their dictionary will be updated in place.
