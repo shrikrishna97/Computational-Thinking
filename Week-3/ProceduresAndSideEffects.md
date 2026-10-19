@@ -1,6 +1,7 @@
 ## 1. Extracting Data from Cards into Tables 
 
 ### 1.1 The Mental Model: Physical Cards to Structured Tables
+
 In Weeks 1 and 2, our computations operated on physical **piles of cards**.
 
 * Each **card** represents a single **unit of information** (an entity/record).
@@ -23,7 +24,8 @@ In Weeks 1 and 2, our computations operated on physical **piles of cards**.
   └─────────────────────────┘               └───────┴─────────┴────────┴───────┘
 ```
 
-### 1.2 Benchmark Dataset: Scores Table
+### 1.2 Dataset: Scores Table
+
 Each row has a fixed, uniform set of columns:
 
 | Card ID | Name | Gender | DoB | City | Mathematics | Physics | Chemistry | Total |
@@ -44,7 +46,7 @@ Consider a supermarket bill:
 * Variable line items: Some customers buy 2 items; others buy 25 items!
   
 
-####  The Bad Design: Single Flat Table
+#### > The Bad Design: Single Flat Table
 
 If we attempt to flatten everything into one table:
 
@@ -60,7 +62,7 @@ If we attempt to flatten everything into one table:
 1. **Severe Data Redundancy:** `Shop`, `Customer`, and `Bill Total` are duplicated on every single row.
 2. **Storage Inefficiency:** Storing duplicate strings over thousands of items wastes significant memory.
 
-#### The Clean Solution: Multiple Tables Linked by a Key
+#### > The Clean Solution: Multiple Tables Linked by a Key
 
 Split the dataset into **two relational tables** linked by a shared identifier (`Bill ID`):
 
@@ -98,8 +100,8 @@ In Week 2, if we wanted to find:
 
 We had to **copy-paste the entire while-loop three times**, merely swapping variable names.
 
-* **Code Bloat:** 30 lines of repeated boilerplate.
-* **Maintenance Nightmare:** If our iteration logic has a bug, we must fix it in multiple places.
+* **Code Bloat:** 30 lines of repeated code.
+* **Maintenance Nightmare:** If our iteration logic has a single issue, we must fix it in multiple places.
 
 A **Procedure** is a named, reusable pseudocode template that performs a specific computation on inputs (**parameters**) and yields an output (**return value**).
 
@@ -126,7 +128,7 @@ Procedure SumMarks(gen, fld)
         Pick a card X from Pile 1
         Move X to Pile 2
         if (X.Gender == gen) {
-            Sum = Sum + X.fld        // fld is dynamically accessed on card X
+            Sum = Sum + X.fld        // fld is accessed on card X
         }
     }
     return(Sum)
