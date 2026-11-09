@@ -1,4 +1,4 @@
-Sep 25 Term: [Mock quiz 1](https://seek.onlinedegree.iitm.ac.in/courses/ns_25t3_cs1001?id=393)
+Sep 26 Term: [Mock quiz 1](https://seek.onlinedegree.iitm.ac.in/courses/ns_26t3_cs1001/outline?id=400)
 
 
 # **CT Quick Notes (Weeks 1 – 4)**
